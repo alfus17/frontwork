@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테트리스 게임</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .game-board { display: grid; grid-template-rows: repeat(20, 20px); grid-template-columns: repeat(10, 20px); gap: 1px; }
+        .block { width: 20px; height: 20px; background: black; }
+    </style>
+</head>
+<body>
+    <div class="game-board" id="gameBoard"></div>
+    <script>
+        const gameBoard = document.getElementById('gameBoard');
+        const ROWS = 20;
+        const COLS = 10;
+        let playfield = Array.from({ length: ROWS }, () => Array(COLS).fill(0));
+
+        function renderBoard() {
+            gameBoard.innerHTML = '';
+            playfield.forEach(row => {
+                row.forEach(cell => {
+                    const block = document.createElement('div');
+                    block.className = 'block';
+                    block.style.background = cell ? 'red' : 'black';
+                    gameBoard.appendChild(block);
+                });
+            });
+        }
+
+        renderBoard();
+    </script>
+</body>
+</html>
