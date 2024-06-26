@@ -59,6 +59,222 @@
     </fieldset>
    </form>
 
-  
+   <hr>
+
+    <h2>text와 관련된 input태그의 타입</h2>
+    <form action="">
+        <h3>type="text"</h3>
+        <p>
+            - 한 줄짜리 텍스트를 입력할 수 있는 텍스트상자(기본값 또한 input type의 기본값)
+        </p>
+        아이디 : <input type="text" name="userId" placeholder="아이디를 넣으세요" maxlength="12" required>
+
+        <h3>type="password"</h3>
+        <p>
+            - 비밀번호를 입력할 수 있는 텍스트 상자
+        </p>
+        비밀번호 : <input type="password" name="userPW" placeholder="영문,숫자,특수문자만 가능" maxlength="15" required>
+
+        <h3>type="search|url|email|tel"</h3>
+        <p>
+            - 겉모습은 일반 텍스트상자와 유사하지만 각각의 정보에 맞게 세분화된 기능 제공
+        </p>
+        검색 : <input type="search" name="q">
+        <br>
+
+        홈페이지 : <input type="url" name="homepage">
+        <br>
+
+        이메일 : <input type="email" name="email">
+        <br>
+
+        전화번호 : <input type="tel" name="tel">
+        <br>
+
+        <input type="submit">
+    </form>
+
+    <hr>
+
+    <h2>숫자와 관련된 input태그의 타입</h2>
+    <form action="">
+        <h3>type="number"</h3>
+        <p>
+            - 숫자값만 작성가능한 텍스트 상자<br>
+            - 스핀박스가 표시됨(스핀박스 : 위/아래 화살표 버튼)
+        </p>
+
+        수량 : <input type="number" name="amount" min="0" max="100" step="5" value="0">
+        <br>
+
+        <h3>type="range"</h3>
+        <p>
+            - 슬라이드바를 통해 숫자 지정 가능
+        </p>
+
+        점수 : <input type="range" name="score" min="0" max="100" step="10">
+        <br><br>
+
+        <input type="submit">
+    </form>
+
+    <h2>날씨 및 시간과 관련된 타입</h2>
+    <form action="">
+        <h3>type="date|month|week|time|datetime-local"</h3>
+
+        <p>연도, 월, 일 입력받을 수 있는 텍스트 상자</p>
+        date : <input type="date" name="dateIn">
+
+        <p>연도, 월까지만 입력받을 수 있는 텍스트 상자</p>
+        month : <input type="month" name="monthIn">
+
+        <p>해당 년도에 몇번째 주인지 입력받을 수 있는 텍스트 상자</p>
+        week : <input type="week" name="weekIn">
+
+        <p>오전|오후 시 분 입력받을 수 있는 텍스트 상자</p>
+        time : <input type="time" name="timeIn">
+
+        <p>연,월,일,오전/오후 시,분 입력받을 수 있는 텍스트 상자</p>
+        datetime-local : <input type="datetime-local" name="dtlIn">
+        <br><br>
+
+        <input type="submit" value="서버로 전송">&emsp;
+        <input type="reset">
+    </form>
+
+    <hr>
+
+    <h2>라디오버튼과 체크박스 관련 input태그의 타입</h2>
+    <form action="test.do">
+        <h3>라디오버튼(type="radio")</h3>
+        <p>
+            - 여러개의 값들 중 오로지 1개만 선택해야 할 때
+            - name속성값이 같아야 1개가 선택
+            - 서버로 value의 값이 전송됨
+        </p>
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="X" id="rx">
+            <label for="rx">선택안함</label>&emsp;
+
+            <input type="radio" name="gender" value="M" id="rm">
+            <label for="rm">남자</label>&emsp;
+            
+            <input type="radio" name="gender" value="F" id="rf">
+            <label for="rf">여자</label>&emsp;
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>고향</legend>
+            <input type="radio" name="hometown" value="서울" id="hs">
+            <label for="hs">서울</label>&emsp;
+
+            <input type="radio" name="hometown" value="경기" id="hg">
+            <label for="hg">경기도</label>&emsp;
+            
+            <input type="radio" name="hometown" value="기타" id="etc">
+            <label for="etc">기타</label>&emsp;
+        </fieldset>
+        <br>
+
+        <input type="submit">&emsp;
+        <input type="reset">
+    </form>
+
+    <hr>
+
+    <form action="test.do">
+        <h3>체크박스(type="checkbox")</h3>
+        <p>
+            - 여러개의 값들 중 여러개를 선택하고자 할 때
+            - 서버로 value의 값이 전송됨
+        </p>
+
+        취미 :
+        <input type="checkbox" name="hobby" value="reading" id="reading">
+        <label for="reading">독서</label>&emsp;
+
+        <input type="checkbox" name="hobby" value="sports" id="sports">
+        <label for="sports">운동</label>&emsp;
+
+        <input type="checkbox" name="hobby" value="movie" id="movie">
+        <label for="movie">영화감상</label>
+
+        <br><br>
+
+        <input type="submit">&emsp;
+        <input type="reset">
+    </form>
+    <br>
+
+    <hr>
+
+    <h2>추가적인 input태그의 타입</h2>
+    <form action="test.do">
+        <h3>type="color"</h3>
+        <p>
+            - 색상을 선택할 수 있는 input 타입
+        </p>
+        색상 선택 : <input type="color" name="color">
+
+        <br>
+
+        <h3>type="file"</h3>
+        <p>
+            - 첨부하고자하는 파일을 선택할 수 있는 input 타입
+        </p>
+        첨부파일 : <input type="file" name="uploadfile">
+
+        <br>
+
+        <h3>type="hidden"</h3>
+        <p>
+            - 특정값을 화면에 노출시키지 않고 서버로 전송해야하는 정보가 있을 때 사용
+        </p>
+        <input type="hidden" name="pageNum" value="3">
+
+        <br>
+
+        <h3>type="submit|reset|button"</h3>
+        <p>
+            - submit : 서버로 form안의 들어있는 모든 값들을 전송
+            - reset : form안의 값들을 초기화
+            - button : 일반버튼(사용자 정의 버튼)
+        </p>
+        <input type="submit">
+        <input type="reset">
+        <input type="button" value="일반버튼">
+
+        <br>
+
+        <h3>button[type="submit|reset|button"]</h3>
+        <button type="submit">전송</button> <!-- button의 기본값 submit -->
+        <button type="reset">초기화</button>
+        <button type="button">일반버튼</button>
+        <br><br>
+        <button>type을 생략하면 submit버튼</button>
+
+
+        <br><br>
+
+        <input type="submit">&emsp;
+        <input type="reset">
+        
+    </form>
+
+    <br>
+
+    <hr>
+
+    <h2>select 태그와 option태그 </h2>
+
+
+
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
