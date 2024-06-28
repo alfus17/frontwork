@@ -1,0 +1,16 @@
+body{
+    background-color: cadetblue;
+    background-color: rgba(red, green, blue, alpha);
+}
+#div-bg{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(2, 128, 133);
+    width: 50%;
+}
+.div-test{
+    margin: 30px;
+    background-color: yellowgreen;
+    border: 1px dashed;
+    padding: 2px11;
+}
