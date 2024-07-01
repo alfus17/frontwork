@@ -12,5 +12,15 @@ body{
     margin: 30px;
     background-color: yellowgreen;
     border: 1px dashed;
-    padding: 2px11;
+    padding: 20px;
+}
+/* #div1{
+    background-clip: ;
+}  */
+
+
+
+.test{
+display: inline-block;
+    background-color: red;
 }

@@ -1,0 +1,19 @@
+body{
+    background-color: aqua;
+}
+header{
+    background-color: darkolivegreen;
+    text-align: center;
+}
+header > h1{
+    color: white;
+}
+section, aside{
+    padding: 5px;
+}
+footer{
+    padding: 5px;
+    background-color: darkviolet;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,44 @@
+/* 전체 */
+body{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: azure;
+}
+/* header */
+header{height: 300px;}
+#logo {
+    float: left;
+    height: 40px;
+    margin: 5px 0;
+}
+header>form{float: right; margin-top: 8px;}
+#titleImg{
+    clear: both;
+    height: 200px;
+    width: 100%;
+}
+
+/* nav */
+.navi{
+    
+    background-color: black;
+    width: 1000px;
+    height: 60px;
+}
+.navi a{
+    display: inline-block;
+    height: 60px;
+    width: 249px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+}
+.navi a:link, .navi a:visited{color: yellow;}
+.navi a:hover, .navi a:focus{color: yellow; text-shadow:2px 2px 2px black;}
+.navi a:activen{color: tomato;}
+
+
+
+
+
+
