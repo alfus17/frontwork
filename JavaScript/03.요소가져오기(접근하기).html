@@ -72,7 +72,7 @@
             console.dir(fieldset);
             fieldset.style.backgroundColor = "rgb("+ 255+","+(255-value) +","+value +")"   
             console.log(fieldset.style.backgroundColor);
-        }
+        }   
         function oninputFuc3(value ){
             var score = document.getElementById('score')
             score.innerHTML = value;
@@ -177,5 +177,109 @@
             }
         }
     </script>
+
+    
+    <h3>4) 클래스를 이용하여 요소가져오기</h3>
+
+    <div class="test"></div>
+    <p class="test"></p>
+    <ul class="test">
+        <li></li>
+        <li></li>
+    </ul>
+    <pre class="test test1"></pre>
+
+    <button onclick="accessClass()">class접근버튼</button>
+
+    <script>
+        function accessClass(){
+            // class속성으로 요소 가져올때
+            // document.getElementsByClassName("class속성값") => 선택된 요소들을 배열에 담아서 반환
+            var arr = document.getElementsByClassName("test");
+            console.log(arr);
+
+        }
+
+    </script>
+
+    <h3>5) 내가 원하는 요소를 자유자재로 가져오기(선택자 활용)</h3>
+    <div id="test2">테스트입미다</div>
+    <div class="test2">
+        <h2>안녕</h2>
+        <h2>좋은 아침</h2>
+    </div>
+    <span>앉아 이 띨띨아!</span>
+
+    <button onclick="accessSelector();">클릭</button>
+    
+    <script>
+        function accessSelector(){
+            // 선택자를 이용하여 요소를 가져오고자 할 때
+            // document.querySelector("선택자") => 선택된 첫번째 요소 객체 하나만 반환
+            // document.querySelectorAll("선택자") => 선택된 요소객체들을 배열에 담아서 반환
+            
+            var divE1 = document.querySelector("#test2");
+            var h2E1 = document.querySelector(".test2>h2");
+            console.log(divE1);
+            console.log(h2E1);
+            
+            // 클래스 test2 다음 span 
+            var spanE1 = document.querySelector(".test2+span")
+            console.log(spanE1);
+            
+            var h2E2 = document.querySelectorAll(".test2>h2");
+            console.log(h2E2);
+
+            for(var i=0; i<h2E2.length; i++){
+                console.log(h2E2[i]);
+            }
+        }
+    </script>
+
+    <br>
+
+    <div>
+        <p class="cls1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellendus nemo nulla natus, rerum labore error reprehenderit alias! Quasi a ipsum optio assumenda rerum tempore veniam obcaecati recusandae ipsam fugiat.</p>
+        <p class="cls2">Facilis beatae commodi consequatur sint recusandae aperiam quod nobis illum neque quibusdam, aliquid doloribus! Consectetur necessitatibus molestiae dignissimos praesentium officiis aperiam at nihil et. Ut unde saepe voluptatem excepturi atque.</p>
+        <p class="cls1">Obcaecati esse reiciendis laborum quasi consequuntur quisquam molestias minima architecto, qui commodi a, beatae ex minus repellat soluta fuga nisi quia aliquid possimus porro voluptatibus perspiciatis enim vitae. Voluptates, cum.</p>
+    </div>
+
+    <button onclick="select();">querySelector</button>
+    <button onclick="selectAll()">querySelectorAll</button>
+
+    <script>
+        function select(){
+            var p2 = document.querySelector(".cls2");
+            p2.style.color = "hotpink";
+        }
+        function selectAll(){
+            var p = document.querySelectorAll(".cls1");
+            console.log(p);
+            for(var i =0; i<p.length; i++){
+                p[i].style.color = "green";
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
