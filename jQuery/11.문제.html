@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <table border="1">
+      <tr>
+        <th>글번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>조회수</th>
+        <th>작성일</th>
+      </tr>
+      <tr class="list">
+        <td>3</td>
+        <td>세번째 글 제목</td>
+        <td>user01</td>
+        <td>23</td>
+        <td>2023-03-31</td>
+      </tr>
+      <tr class="list">
+        <td>2</td>
+        <td>두번째 글 제목</td>
+        <td>user02</td>
+        <td>15</td>
+        <td>2023-03-13</td>
+      </tr>
+      <tr class="list">
+        <td>1</td>
+        <td>첫번째 글 제목</td>
+        <td>admin</td>
+        <td>75</td>
+        <td>2023-03-12</td>
+      </tr>
+
+    </table>
+
+    <div class="area"></div>
+    <script>
+        $(() => {
+            $('tr>td').each(function(){
+                
+                console.log($(this).att);
+                
+            })
+
+            
+        })
+    </script>
+
+</body>
+</html>
