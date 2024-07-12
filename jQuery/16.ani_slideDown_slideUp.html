@@ -76,10 +76,10 @@
         (()=>{
             $('div').click(function(){
                 console.log($(this).next().ccs() );
-                if($(this).next().ccs() == 'none'){
-                    $(this).next().ccs('display','block');F
+                if($(this).next().ccs('display') == 'none'){
+                      
                 }else{
-                    $(this).next().ccs('display','none');
+                 
                 }
             })
         })

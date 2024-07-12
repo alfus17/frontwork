@@ -6,14 +6,23 @@
     <title>홈페이지</title>
 
     <style>
+        *{margin: 0px auto;}
+        body{
+            background-color: rgb(43, 41, 41);
+            width: 1000px;
+            
+        }
+        body *{
+            color: white;
+        }
+
         #navbar li{list-style: none; float: right; width: 100px; height: 50px;}
         #navbar a{
             text-decoration: none;
-            background-color: black;
+           
             width: 100px;
             height: 50px;
             font:bold 30px;
-            color: white;
             display: inline-block;
             line-height: 50px;
             text-align: center;
@@ -23,18 +32,24 @@
         }
         #ad_picture li{list-style: none;}
         #ad_picture img{
+            margin-left: 100px;
+            text-align: center;
             width: 80%;
-            height: 450px;
+            height: auto;
         }
 
         #announcement {
             float: left;
         }
 
+        #all_div{
+            
+        }
+
     </style>
 </head>
 <body>
-    <div>
+   <header>
         <div>
             <img id="logo"  src="https://img2.quasarzone.com/assets/images/1intro_image.png" alt="">
 
@@ -46,7 +61,8 @@
                 <li><a href="">조립pc</a></li>
             </ul>
         </div>
-
+    </header>
+    <div id="all_div">
         <div id="ad_picture">
             <ul >
                 <li><img src="https://img.danawa.com/shoppingClip/001/2024/07/11/shoppingClip1_3_20240711093958.jpg" alt="" ></li>
